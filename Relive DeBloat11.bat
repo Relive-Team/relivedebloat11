@@ -41,9 +41,9 @@ echo   Wybierz przegladarke: (wpisz numer)
 echo =============================
 echo [0] Pomin przegladarke
 echo [1] Firefox
-echo [2] Google Chrome (wkrotce)
+echo [2] Google Chrome
 echo [3] Brave
-echo [4] Opera GX (nie polecamy, wkrotce)
+echo [4] Opera GX (nie polecamy)
 echo [5] Wyjscie
 echo =============================
 echo UWAGA! Beda wyskakiwac rozne programy i bedzie migac ekran
