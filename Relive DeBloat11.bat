@@ -72,12 +72,18 @@ echo Instalator Firefoksa zostal pobrany i uruchomiony!
 goto debloat
 
 :chrome
-echo Wkrotce
-goto menu
+echo Wybrales Google Chrome
+
+:: Pobieranie instalatora Chroma
+powershell -Command "Invoke-WebRequest -Uri 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B58C50035-B170-9451-AB0A-4095A732D74F%7D%26lang%3Dpl%26browser%3D3%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe' -OutFile '%temp%\ChromeSetup.exe'"
+
+:: Uruchamianie instalatora
+start "" "%temp%\ChromeSetup.exe"
+
+goto debloat
 
 :brave
 echo Wybrales Brave
-@echo off
 
 :: Pobieranie instalatora Brave
 powershell -Command "Invoke-WebRequest -Uri 'https://referrals.brave.com/latest/BraveBrowserSetup-BRV010.exe' -OutFile '%temp%\BraveInstaller.exe'"
@@ -88,9 +94,13 @@ goto debloat
 
 :operagx
 echo Wybrales Opera GX
-@echo off
-echo Wkrotce
-goto menu
+
+:: Pobieranie instalatora Opery GX
+powershell -Command "Invoke-WebRequest -Uri 'https://net.geo.opera.com/opera_gx/stable/windows?utm_source=google&utm_medium=ose&utm_campaign=%28none%29&http_referrer=https%3A%2F%2Fwww.google.com%2F&utm_site=opera_com&utm_lastpage=opera.com%2Fgx&dl_token=96323432' -OutFile '%temp%\GXSetup.exe'"
+
+:: Uruchamianie instalatora
+start "" "%temp%\GXSetup.exe"
+goto debloat
 
 :koniec
 exit
